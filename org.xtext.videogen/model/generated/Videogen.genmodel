@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.xtext.videogen/src-gen" editDirectory="/org.xtext.videogen.edit/src"
+    editorDirectory="/org.xtext.videogen.editor/src" modelPluginID="org.xtext.videogen"
+    forceOverwrite="true" modelName="Videogen" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="6.0" copyrightFields="false" editPluginID="org.xtext.videogen.edit"
+    editorPluginID="org.xtext.videogen.editor" runtimeVersion="2.11">
+  <genPackages prefix="Videogen" basePackage="org.xtext" disposableProviderFactory="true"
+      fileExtensions="mydsl" ecorePackage="Videogen.ecore#/">
+    <genClasses ecoreClass="Videogen.ecore#//VideoGenModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Videogen.ecore#//VideoGenModel/variante_videos"/>
+    </genClasses>
+    <genClasses ecoreClass="Videogen.ecore#//VarianteVideo">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Videogen.ecore#//VarianteVideo/video"/>
+    </genClasses>
+    <genClasses ecoreClass="Videogen.ecore#//MandatoryVideoSeq"/>
+    <genClasses ecoreClass="Videogen.ecore#//OptionalVideoSeq"/>
+    <genClasses ecoreClass="Videogen.ecore#//AlternativeVideoSeq"/>
+    <genClasses ecoreClass="Videogen.ecore#//Video">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//Video/videoid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//Video/chemin"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Videogen.ecore#//Video/propriete"/>
+    </genClasses>
+    <genClasses ecoreClass="Videogen.ecore#//VideoPropriete">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//VideoPropriete/probabilite"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//VideoPropriete/duree"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//VideoPropriete/description"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

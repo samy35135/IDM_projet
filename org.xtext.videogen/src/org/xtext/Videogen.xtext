@@ -2,8 +2,49 @@ grammar org.xtext.Videogen with org.eclipse.xtext.common.Terminals
 
 generate videogen "http://www.xtext.org/Videogen"
 
-Model:
-	greetings+=Greeting*;
+
+/*
+ * VideoGenModel contiendra toute la syntaxe
+ */
+VideoGenModel:
+	'VideoGen' LEFT_BRACKET
+	variante_videos+=VarianteVideo* RIGHT_BRACKET
+	;
+
+/** 
+ * une variante de vidéo est composée d'une video obligatoire (mandatory) 
+ * puis de vidéos optionnal et d'alternatives
+ */
+VarianteVideo: MandatoryVideoSeq | OptionalVideoSeq | AlternativeVideoSeq
+;
+
+MandatoryVideoSeq : 'mandatory' video=Video ;
+OptionalVideoSeq : 'optional' video=Video;
+AlternativeVideoSeq: 'alternative'  video=Video ;
+
+/**
+ * La vidéo à un ID et son chemin, propriété : Une description, 
+ * sa durée, sa probabilité d'apparition
+ */
+Video: 
+	'video' 
+	(videoid=ID)?
+	chemin=STRING
+	LEFT_BRACKET
+	propriete=VideoPropriete
+	RIGHT_BRACKET
+;
+
+/**
+ * la description d'une séquence vidéo est composé d'une probabilite, une duree
+ * et d'une chaine de caractères
+ */
+VideoPropriete :
+	('probabilite' probabilite=INT)?
+	('duree' duree=INT)?
+	('description' description=STRING)?
+;
+
 	
-Greeting:
-	'Hello' name=ID '!';
+terminal LEFT_BRACKET:'{';
+terminal RIGHT_BRACKET:'}';
