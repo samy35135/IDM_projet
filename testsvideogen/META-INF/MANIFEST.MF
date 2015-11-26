@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Testsvideogen
+Bundle-SymbolicName: testsvideogen
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: testsvideogen.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.xtext.videogen;bundle-version="1.0.0",
+ org.xtext.videogen.tests;bundle-version="1.0.0",
+ org.xtext.videogen.ui;bundle-version="1.0.0",
+ org.junit
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
