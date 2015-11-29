@@ -105,6 +105,11 @@ public class VideogenAdapterFactory extends AdapterFactoryImpl
         return createVideoAdapter();
       }
       @Override
+      public Adapter caseVideoA(VideoA object)
+      {
+        return createVideoAAdapter();
+      }
+      @Override
       public Adapter caseVideoPropriete(VideoPropriete object)
       {
         return createVideoProprieteAdapter();
@@ -217,6 +222,21 @@ public class VideogenAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createVideoAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.videogen.VideoA <em>Video A</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.videogen.VideoA
+   * @generated
+   */
+  public Adapter createVideoAAdapter()
   {
     return null;
   }

@@ -43,6 +43,9 @@ public class VideogenParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOptionalVideoSeqAccess().getGroup(), "rule__OptionalVideoSeq__Group__0");
 					put(grammarAccess.getAlternativeVideoSeqAccess().getGroup(), "rule__AlternativeVideoSeq__Group__0");
 					put(grammarAccess.getVideoAccess().getGroup(), "rule__Video__Group__0");
+					put(grammarAccess.getVideoAccess().getGroup_3(), "rule__Video__Group_3__0");
+					put(grammarAccess.getVideoAAccess().getGroup(), "rule__VideoA__Group__0");
+					put(grammarAccess.getVideoAAccess().getGroup_2(), "rule__VideoA__Group_2__0");
 					put(grammarAccess.getVideoProprieteAccess().getGroup(), "rule__VideoPropriete__Group__0");
 					put(grammarAccess.getVideoProprieteAccess().getGroup_0(), "rule__VideoPropriete__Group_0__0");
 					put(grammarAccess.getVideoProprieteAccess().getGroup_1(), "rule__VideoPropriete__Group_1__0");
@@ -53,7 +56,10 @@ public class VideogenParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAlternativeVideoSeqAccess().getVideoAssignment_1(), "rule__AlternativeVideoSeq__VideoAssignment_1");
 					put(grammarAccess.getVideoAccess().getVideoidAssignment_1(), "rule__Video__VideoidAssignment_1");
 					put(grammarAccess.getVideoAccess().getCheminAssignment_2(), "rule__Video__CheminAssignment_2");
-					put(grammarAccess.getVideoAccess().getProprieteAssignment_4(), "rule__Video__ProprieteAssignment_4");
+					put(grammarAccess.getVideoAccess().getProprieteAssignment_3_1(), "rule__Video__ProprieteAssignment_3_1");
+					put(grammarAccess.getVideoAAccess().getVideoidAssignment_0(), "rule__VideoA__VideoidAssignment_0");
+					put(grammarAccess.getVideoAAccess().getVideoidAssignment_2_1(), "rule__VideoA__VideoidAssignment_2_1");
+					put(grammarAccess.getVideoAAccess().getCheminAssignment_2_2(), "rule__VideoA__CheminAssignment_2_2");
 					put(grammarAccess.getVideoProprieteAccess().getProbabiliteAssignment_0_1(), "rule__VideoPropriete__ProbabiliteAssignment_0_1");
 					put(grammarAccess.getVideoProprieteAccess().getDureeAssignment_1_1(), "rule__VideoPropriete__DureeAssignment_1_1");
 					put(grammarAccess.getVideoProprieteAccess().getDescriptionAssignment_2_1(), "rule__VideoPropriete__DescriptionAssignment_2_1");

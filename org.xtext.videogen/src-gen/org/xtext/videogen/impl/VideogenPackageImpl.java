@@ -14,6 +14,7 @@ import org.xtext.videogen.MandatoryVideoSeq;
 import org.xtext.videogen.OptionalVideoSeq;
 import org.xtext.videogen.VarianteVideo;
 import org.xtext.videogen.Video;
+import org.xtext.videogen.VideoA;
 import org.xtext.videogen.VideoGenModel;
 import org.xtext.videogen.VideoPropriete;
 import org.xtext.videogen.VideogenFactory;
@@ -68,6 +69,13 @@ public class VideogenPackageImpl extends EPackageImpl implements VideogenPackage
    * @generated
    */
   private EClass videoEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass videoAEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -174,9 +182,9 @@ public class VideogenPackageImpl extends EPackageImpl implements VideogenPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getVarianteVideo_Video()
+  public EClass getMandatoryVideoSeq()
   {
-    return (EReference)varianteVideoEClass.getEStructuralFeatures().get(0);
+    return mandatoryVideoSeqEClass;
   }
 
   /**
@@ -184,9 +192,9 @@ public class VideogenPackageImpl extends EPackageImpl implements VideogenPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getMandatoryVideoSeq()
+  public EReference getMandatoryVideoSeq_Video()
   {
-    return mandatoryVideoSeqEClass;
+    return (EReference)mandatoryVideoSeqEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -204,9 +212,29 @@ public class VideogenPackageImpl extends EPackageImpl implements VideogenPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getOptionalVideoSeq_Video()
+  {
+    return (EReference)optionalVideoSeqEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getAlternativeVideoSeq()
   {
     return alternativeVideoSeqEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAlternativeVideoSeq_Video()
+  {
+    return (EReference)alternativeVideoSeqEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -247,6 +275,36 @@ public class VideogenPackageImpl extends EPackageImpl implements VideogenPackage
   public EReference getVideo_Propriete()
   {
     return (EReference)videoEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getVideoA()
+  {
+    return videoAEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getVideoA_Videoid()
+  {
+    return (EAttribute)videoAEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getVideoA_Chemin()
+  {
+    return (EAttribute)videoAEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -323,18 +381,24 @@ public class VideogenPackageImpl extends EPackageImpl implements VideogenPackage
     createEReference(videoGenModelEClass, VIDEO_GEN_MODEL__VARIANTE_VIDEOS);
 
     varianteVideoEClass = createEClass(VARIANTE_VIDEO);
-    createEReference(varianteVideoEClass, VARIANTE_VIDEO__VIDEO);
 
     mandatoryVideoSeqEClass = createEClass(MANDATORY_VIDEO_SEQ);
+    createEReference(mandatoryVideoSeqEClass, MANDATORY_VIDEO_SEQ__VIDEO);
 
     optionalVideoSeqEClass = createEClass(OPTIONAL_VIDEO_SEQ);
+    createEReference(optionalVideoSeqEClass, OPTIONAL_VIDEO_SEQ__VIDEO);
 
     alternativeVideoSeqEClass = createEClass(ALTERNATIVE_VIDEO_SEQ);
+    createEReference(alternativeVideoSeqEClass, ALTERNATIVE_VIDEO_SEQ__VIDEO);
 
     videoEClass = createEClass(VIDEO);
     createEAttribute(videoEClass, VIDEO__VIDEOID);
     createEAttribute(videoEClass, VIDEO__CHEMIN);
     createEReference(videoEClass, VIDEO__PROPRIETE);
+
+    videoAEClass = createEClass(VIDEO_A);
+    createEAttribute(videoAEClass, VIDEO_A__VIDEOID);
+    createEAttribute(videoAEClass, VIDEO_A__CHEMIN);
 
     videoProprieteEClass = createEClass(VIDEO_PROPRIETE);
     createEAttribute(videoProprieteEClass, VIDEO_PROPRIETE__PROBABILITE);
@@ -380,18 +444,24 @@ public class VideogenPackageImpl extends EPackageImpl implements VideogenPackage
     initEReference(getVideoGenModel_Variante_videos(), this.getVarianteVideo(), null, "variante_videos", null, 0, -1, VideoGenModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(varianteVideoEClass, VarianteVideo.class, "VarianteVideo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getVarianteVideo_Video(), this.getVideo(), null, "video", null, 0, 1, VarianteVideo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(mandatoryVideoSeqEClass, MandatoryVideoSeq.class, "MandatoryVideoSeq", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getMandatoryVideoSeq_Video(), this.getVideo(), null, "video", null, 0, 1, MandatoryVideoSeq.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(optionalVideoSeqEClass, OptionalVideoSeq.class, "OptionalVideoSeq", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getOptionalVideoSeq_Video(), this.getVideo(), null, "video", null, 0, 1, OptionalVideoSeq.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(alternativeVideoSeqEClass, AlternativeVideoSeq.class, "AlternativeVideoSeq", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getAlternativeVideoSeq_Video(), this.getVideoA(), null, "video", null, 0, 1, AlternativeVideoSeq.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(videoEClass, Video.class, "Video", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getVideo_Videoid(), ecorePackage.getEString(), "videoid", null, 0, 1, Video.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getVideo_Chemin(), ecorePackage.getEString(), "chemin", null, 0, 1, Video.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getVideo_Propriete(), this.getVideoPropriete(), null, "propriete", null, 0, 1, Video.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(videoAEClass, VideoA.class, "VideoA", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getVideoA_Videoid(), ecorePackage.getEString(), "videoid", null, 0, 1, VideoA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getVideoA_Chemin(), ecorePackage.getEString(), "chemin", null, 0, 1, VideoA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(videoProprieteEClass, VideoPropriete.class, "VideoPropriete", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getVideoPropriete_Probabilite(), ecorePackage.getEInt(), "probabilite", null, 0, 1, VideoPropriete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
