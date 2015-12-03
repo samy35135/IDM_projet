@@ -1,0 +1,14 @@
+package transformation;
+
+import java.net.URI;
+
+public class MainTransfo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		videotransfo VT = new videotransfo();
+		VideoGenModel videogen = VT.loadVideoGenerator(URI.create("/Users/matthieucolliaux/Documents/Work/runtime-EclipseXtext/VideoGen/src/videogen.mydsl"));
+
+	}
+
+}
