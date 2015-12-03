@@ -132,23 +132,23 @@ public class VideogenGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cAlternativeKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cVideoAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cVideoVideoAParserRuleCall_1_0 = (RuleCall)cVideoAssignment_1.eContents().get(0);
+		private final RuleCall cVideoVideoParserRuleCall_1_0 = (RuleCall)cVideoAssignment_1.eContents().get(0);
 		
 		//AlternativeVideoSeq:
-		//	"alternative" video=VideoA;
+		//	"alternative" video=Video;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"alternative" video=VideoA
+		//"alternative" video=Video
 		public Group getGroup() { return cGroup; }
 
 		//"alternative"
 		public Keyword getAlternativeKeyword_0() { return cAlternativeKeyword_0; }
 
-		//video=VideoA
+		//video=Video
 		public Assignment getVideoAssignment_1() { return cVideoAssignment_1; }
 
-		//VideoA
-		public RuleCall getVideoVideoAParserRuleCall_1_0() { return cVideoVideoAParserRuleCall_1_0; }
+		//Video
+		public RuleCall getVideoVideoParserRuleCall_1_0() { return cVideoVideoParserRuleCall_1_0; }
 	}
 
 	public class VideoElements extends AbstractParserRuleElementFinder {
@@ -159,20 +159,19 @@ public class VideogenGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cVideoidIDTerminalRuleCall_1_0 = (RuleCall)cVideoidAssignment_1.eContents().get(0);
 		private final Assignment cCheminAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cCheminSTRINGTerminalRuleCall_2_0 = (RuleCall)cCheminAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final RuleCall cLEFT_BRACKETTerminalRuleCall_3_0 = (RuleCall)cGroup_3.eContents().get(0);
-		private final Assignment cProprieteAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cProprieteVideoProprieteParserRuleCall_3_1_0 = (RuleCall)cProprieteAssignment_3_1.eContents().get(0);
-		private final RuleCall cRIGHT_BRACKETTerminalRuleCall_3_2 = (RuleCall)cGroup_3.eContents().get(2);
+		private final RuleCall cLEFT_BRACKETTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final Assignment cProprieteAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cProprieteVideoProprieteParserRuleCall_4_0 = (RuleCall)cProprieteAssignment_4.eContents().get(0);
+		private final RuleCall cRIGHT_BRACKETTerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
 		
 		/// **
 		// * La vidéo à un ID et son chemin, propriété : Une description, 
 		// * sa durée, sa probabilité d'apparition
 		// * / Video:
-		//	"video" videoid=ID? chemin=STRING (LEFT_BRACKET propriete=VideoPropriete RIGHT_BRACKET)?;
+		//	"video" videoid=ID? chemin=STRING LEFT_BRACKET propriete=VideoPropriete RIGHT_BRACKET;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"video" videoid=ID? chemin=STRING (LEFT_BRACKET propriete=VideoPropriete RIGHT_BRACKET)?
+		//"video" videoid=ID? chemin=STRING LEFT_BRACKET propriete=VideoPropriete RIGHT_BRACKET
 		public Group getGroup() { return cGroup; }
 
 		//"video"
@@ -190,74 +189,17 @@ public class VideogenGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getCheminSTRINGTerminalRuleCall_2_0() { return cCheminSTRINGTerminalRuleCall_2_0; }
 
-		//(LEFT_BRACKET propriete=VideoPropriete RIGHT_BRACKET)?
-		public Group getGroup_3() { return cGroup_3; }
-
 		//LEFT_BRACKET
-		public RuleCall getLEFT_BRACKETTerminalRuleCall_3_0() { return cLEFT_BRACKETTerminalRuleCall_3_0; }
+		public RuleCall getLEFT_BRACKETTerminalRuleCall_3() { return cLEFT_BRACKETTerminalRuleCall_3; }
 
 		//propriete=VideoPropriete
-		public Assignment getProprieteAssignment_3_1() { return cProprieteAssignment_3_1; }
+		public Assignment getProprieteAssignment_4() { return cProprieteAssignment_4; }
 
 		//VideoPropriete
-		public RuleCall getProprieteVideoProprieteParserRuleCall_3_1_0() { return cProprieteVideoProprieteParserRuleCall_3_1_0; }
+		public RuleCall getProprieteVideoProprieteParserRuleCall_4_0() { return cProprieteVideoProprieteParserRuleCall_4_0; }
 
 		//RIGHT_BRACKET
-		public RuleCall getRIGHT_BRACKETTerminalRuleCall_3_2() { return cRIGHT_BRACKETTerminalRuleCall_3_2; }
-	}
-
-	public class VideoAElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "VideoA");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cVideoidAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cVideoidIDTerminalRuleCall_0_0 = (RuleCall)cVideoidAssignment_0.eContents().get(0);
-		private final RuleCall cLEFT_BRACKETTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cVideoKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cVideoidAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cVideoidIDTerminalRuleCall_2_1_0 = (RuleCall)cVideoidAssignment_2_1.eContents().get(0);
-		private final Assignment cCheminAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
-		private final RuleCall cCheminSTRINGTerminalRuleCall_2_2_0 = (RuleCall)cCheminAssignment_2_2.eContents().get(0);
-		private final RuleCall cRIGHT_BRACKETTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
-		
-		/// **
-		// * Alternatives fonctionne différement des autres, pas de chaine de caractères
-		// * / VideoA:
-		//	videoid=ID? LEFT_BRACKET ("video" videoid=ID? chemin=STRING)* RIGHT_BRACKET;
-		@Override public ParserRule getRule() { return rule; }
-
-		//videoid=ID? LEFT_BRACKET ("video" videoid=ID? chemin=STRING)* RIGHT_BRACKET
-		public Group getGroup() { return cGroup; }
-
-		//videoid=ID?
-		public Assignment getVideoidAssignment_0() { return cVideoidAssignment_0; }
-
-		//ID
-		public RuleCall getVideoidIDTerminalRuleCall_0_0() { return cVideoidIDTerminalRuleCall_0_0; }
-
-		//LEFT_BRACKET
-		public RuleCall getLEFT_BRACKETTerminalRuleCall_1() { return cLEFT_BRACKETTerminalRuleCall_1; }
-
-		//("video" videoid=ID? chemin=STRING)*
-		public Group getGroup_2() { return cGroup_2; }
-
-		//"video"
-		public Keyword getVideoKeyword_2_0() { return cVideoKeyword_2_0; }
-
-		//videoid=ID?
-		public Assignment getVideoidAssignment_2_1() { return cVideoidAssignment_2_1; }
-
-		//ID
-		public RuleCall getVideoidIDTerminalRuleCall_2_1_0() { return cVideoidIDTerminalRuleCall_2_1_0; }
-
-		//chemin=STRING
-		public Assignment getCheminAssignment_2_2() { return cCheminAssignment_2_2; }
-
-		//STRING
-		public RuleCall getCheminSTRINGTerminalRuleCall_2_2_0() { return cCheminSTRINGTerminalRuleCall_2_2_0; }
-
-		//RIGHT_BRACKET
-		public RuleCall getRIGHT_BRACKETTerminalRuleCall_3() { return cRIGHT_BRACKETTerminalRuleCall_3; }
+		public RuleCall getRIGHT_BRACKETTerminalRuleCall_5() { return cRIGHT_BRACKETTerminalRuleCall_5; }
 	}
 
 	public class VideoProprieteElements extends AbstractParserRuleElementFinder {
@@ -330,7 +272,6 @@ public class VideogenGrammarAccess extends AbstractGrammarElementFinder {
 	private final OptionalVideoSeqElements pOptionalVideoSeq;
 	private final AlternativeVideoSeqElements pAlternativeVideoSeq;
 	private final VideoElements pVideo;
-	private final VideoAElements pVideoA;
 	private final VideoProprieteElements pVideoPropriete;
 	private final TerminalRule tLEFT_BRACKET;
 	private final TerminalRule tRIGHT_BRACKET;
@@ -350,7 +291,6 @@ public class VideogenGrammarAccess extends AbstractGrammarElementFinder {
 		this.pOptionalVideoSeq = new OptionalVideoSeqElements();
 		this.pAlternativeVideoSeq = new AlternativeVideoSeqElements();
 		this.pVideo = new VideoElements();
-		this.pVideoA = new VideoAElements();
 		this.pVideoPropriete = new VideoProprieteElements();
 		this.tLEFT_BRACKET = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "LEFT_BRACKET");
 		this.tRIGHT_BRACKET = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "RIGHT_BRACKET");
@@ -429,7 +369,7 @@ public class VideogenGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//AlternativeVideoSeq:
-	//	"alternative" video=VideoA;
+	//	"alternative" video=Video;
 	public AlternativeVideoSeqElements getAlternativeVideoSeqAccess() {
 		return pAlternativeVideoSeq;
 	}
@@ -442,25 +382,13 @@ public class VideogenGrammarAccess extends AbstractGrammarElementFinder {
 	// * La vidéo à un ID et son chemin, propriété : Une description, 
 	// * sa durée, sa probabilité d'apparition
 	// * / Video:
-	//	"video" videoid=ID? chemin=STRING (LEFT_BRACKET propriete=VideoPropriete RIGHT_BRACKET)?;
+	//	"video" videoid=ID? chemin=STRING LEFT_BRACKET propriete=VideoPropriete RIGHT_BRACKET;
 	public VideoElements getVideoAccess() {
 		return pVideo;
 	}
 	
 	public ParserRule getVideoRule() {
 		return getVideoAccess().getRule();
-	}
-
-	/// **
-	// * Alternatives fonctionne différement des autres, pas de chaine de caractères
-	// * / VideoA:
-	//	videoid=ID? LEFT_BRACKET ("video" videoid=ID? chemin=STRING)* RIGHT_BRACKET;
-	public VideoAElements getVideoAAccess() {
-		return pVideoA;
-	}
-	
-	public ParserRule getVideoARule() {
-		return getVideoAAccess().getRule();
 	}
 
 	/// **

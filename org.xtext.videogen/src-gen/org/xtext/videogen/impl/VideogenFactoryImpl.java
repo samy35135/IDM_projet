@@ -70,7 +70,6 @@ public class VideogenFactoryImpl extends EFactoryImpl implements VideogenFactory
       case VideogenPackage.OPTIONAL_VIDEO_SEQ: return createOptionalVideoSeq();
       case VideogenPackage.ALTERNATIVE_VIDEO_SEQ: return createAlternativeVideoSeq();
       case VideogenPackage.VIDEO: return createVideo();
-      case VideogenPackage.VIDEO_A: return createVideoA();
       case VideogenPackage.VIDEO_PROPRIETE: return createVideoPropriete();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -141,17 +140,6 @@ public class VideogenFactoryImpl extends EFactoryImpl implements VideogenFactory
   {
     VideoImpl video = new VideoImpl();
     return video;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public VideoA createVideoA()
-  {
-    VideoAImpl videoA = new VideoAImpl();
-    return videoA;
   }
 
   /**

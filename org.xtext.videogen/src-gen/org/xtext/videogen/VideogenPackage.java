@@ -95,13 +95,22 @@ public interface VideogenPackage extends EPackage
   int VARIANTE_VIDEO = 1;
 
   /**
+   * The feature id for the '<em><b>Video</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIANTE_VIDEO__VIDEO = 0;
+
+  /**
    * The number of structural features of the '<em>Variante Video</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VARIANTE_VIDEO_FEATURE_COUNT = 0;
+  int VARIANTE_VIDEO_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.videogen.impl.MandatoryVideoSeqImpl <em>Mandatory Video Seq</em>}' class.
@@ -120,7 +129,7 @@ public interface VideogenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MANDATORY_VIDEO_SEQ__VIDEO = VARIANTE_VIDEO_FEATURE_COUNT + 0;
+  int MANDATORY_VIDEO_SEQ__VIDEO = VARIANTE_VIDEO__VIDEO;
 
   /**
    * The number of structural features of the '<em>Mandatory Video Seq</em>' class.
@@ -129,7 +138,7 @@ public interface VideogenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MANDATORY_VIDEO_SEQ_FEATURE_COUNT = VARIANTE_VIDEO_FEATURE_COUNT + 1;
+  int MANDATORY_VIDEO_SEQ_FEATURE_COUNT = VARIANTE_VIDEO_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.xtext.videogen.impl.OptionalVideoSeqImpl <em>Optional Video Seq</em>}' class.
@@ -148,7 +157,7 @@ public interface VideogenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OPTIONAL_VIDEO_SEQ__VIDEO = VARIANTE_VIDEO_FEATURE_COUNT + 0;
+  int OPTIONAL_VIDEO_SEQ__VIDEO = VARIANTE_VIDEO__VIDEO;
 
   /**
    * The number of structural features of the '<em>Optional Video Seq</em>' class.
@@ -157,7 +166,7 @@ public interface VideogenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OPTIONAL_VIDEO_SEQ_FEATURE_COUNT = VARIANTE_VIDEO_FEATURE_COUNT + 1;
+  int OPTIONAL_VIDEO_SEQ_FEATURE_COUNT = VARIANTE_VIDEO_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.xtext.videogen.impl.AlternativeVideoSeqImpl <em>Alternative Video Seq</em>}' class.
@@ -176,7 +185,7 @@ public interface VideogenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ALTERNATIVE_VIDEO_SEQ__VIDEO = VARIANTE_VIDEO_FEATURE_COUNT + 0;
+  int ALTERNATIVE_VIDEO_SEQ__VIDEO = VARIANTE_VIDEO__VIDEO;
 
   /**
    * The number of structural features of the '<em>Alternative Video Seq</em>' class.
@@ -185,7 +194,7 @@ public interface VideogenPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ALTERNATIVE_VIDEO_SEQ_FEATURE_COUNT = VARIANTE_VIDEO_FEATURE_COUNT + 1;
+  int ALTERNATIVE_VIDEO_SEQ_FEATURE_COUNT = VARIANTE_VIDEO_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.xtext.videogen.impl.VideoImpl <em>Video</em>}' class.
@@ -234,43 +243,6 @@ public interface VideogenPackage extends EPackage
   int VIDEO_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link org.xtext.videogen.impl.VideoAImpl <em>Video A</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.videogen.impl.VideoAImpl
-   * @see org.xtext.videogen.impl.VideogenPackageImpl#getVideoA()
-   * @generated
-   */
-  int VIDEO_A = 6;
-
-  /**
-   * The feature id for the '<em><b>Videoid</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VIDEO_A__VIDEOID = 0;
-
-  /**
-   * The feature id for the '<em><b>Chemin</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VIDEO_A__CHEMIN = 1;
-
-  /**
-   * The number of structural features of the '<em>Video A</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VIDEO_A_FEATURE_COUNT = 2;
-
-  /**
    * The meta object id for the '{@link org.xtext.videogen.impl.VideoProprieteImpl <em>Video Propriete</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -278,7 +250,7 @@ public interface VideogenPackage extends EPackage
    * @see org.xtext.videogen.impl.VideogenPackageImpl#getVideoPropriete()
    * @generated
    */
-  int VIDEO_PROPRIETE = 7;
+  int VIDEO_PROPRIETE = 6;
 
   /**
    * The feature id for the '<em><b>Probabilite</b></em>' attribute.
@@ -349,6 +321,17 @@ public interface VideogenPackage extends EPackage
   EClass getVarianteVideo();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.videogen.VarianteVideo#getVideo <em>Video</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Video</em>'.
+   * @see org.xtext.videogen.VarianteVideo#getVideo()
+   * @see #getVarianteVideo()
+   * @generated
+   */
+  EReference getVarianteVideo_Video();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.videogen.MandatoryVideoSeq <em>Mandatory Video Seq</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -357,17 +340,6 @@ public interface VideogenPackage extends EPackage
    * @generated
    */
   EClass getMandatoryVideoSeq();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.videogen.MandatoryVideoSeq#getVideo <em>Video</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Video</em>'.
-   * @see org.xtext.videogen.MandatoryVideoSeq#getVideo()
-   * @see #getMandatoryVideoSeq()
-   * @generated
-   */
-  EReference getMandatoryVideoSeq_Video();
 
   /**
    * Returns the meta object for class '{@link org.xtext.videogen.OptionalVideoSeq <em>Optional Video Seq</em>}'.
@@ -380,17 +352,6 @@ public interface VideogenPackage extends EPackage
   EClass getOptionalVideoSeq();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.videogen.OptionalVideoSeq#getVideo <em>Video</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Video</em>'.
-   * @see org.xtext.videogen.OptionalVideoSeq#getVideo()
-   * @see #getOptionalVideoSeq()
-   * @generated
-   */
-  EReference getOptionalVideoSeq_Video();
-
-  /**
    * Returns the meta object for class '{@link org.xtext.videogen.AlternativeVideoSeq <em>Alternative Video Seq</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -399,17 +360,6 @@ public interface VideogenPackage extends EPackage
    * @generated
    */
   EClass getAlternativeVideoSeq();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.videogen.AlternativeVideoSeq#getVideo <em>Video</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Video</em>'.
-   * @see org.xtext.videogen.AlternativeVideoSeq#getVideo()
-   * @see #getAlternativeVideoSeq()
-   * @generated
-   */
-  EReference getAlternativeVideoSeq_Video();
 
   /**
    * Returns the meta object for class '{@link org.xtext.videogen.Video <em>Video</em>}'.
@@ -453,38 +403,6 @@ public interface VideogenPackage extends EPackage
    * @generated
    */
   EReference getVideo_Propriete();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.videogen.VideoA <em>Video A</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Video A</em>'.
-   * @see org.xtext.videogen.VideoA
-   * @generated
-   */
-  EClass getVideoA();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.videogen.VideoA#getVideoid <em>Videoid</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Videoid</em>'.
-   * @see org.xtext.videogen.VideoA#getVideoid()
-   * @see #getVideoA()
-   * @generated
-   */
-  EAttribute getVideoA_Videoid();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.videogen.VideoA#getChemin <em>Chemin</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Chemin</em>'.
-   * @see org.xtext.videogen.VideoA#getChemin()
-   * @see #getVideoA()
-   * @generated
-   */
-  EAttribute getVideoA_Chemin();
 
   /**
    * Returns the meta object for class '{@link org.xtext.videogen.VideoPropriete <em>Video Propriete</em>}'.
@@ -581,6 +499,14 @@ public interface VideogenPackage extends EPackage
     EClass VARIANTE_VIDEO = eINSTANCE.getVarianteVideo();
 
     /**
+     * The meta object literal for the '<em><b>Video</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference VARIANTE_VIDEO__VIDEO = eINSTANCE.getVarianteVideo_Video();
+
+    /**
      * The meta object literal for the '{@link org.xtext.videogen.impl.MandatoryVideoSeqImpl <em>Mandatory Video Seq</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -589,14 +515,6 @@ public interface VideogenPackage extends EPackage
      * @generated
      */
     EClass MANDATORY_VIDEO_SEQ = eINSTANCE.getMandatoryVideoSeq();
-
-    /**
-     * The meta object literal for the '<em><b>Video</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MANDATORY_VIDEO_SEQ__VIDEO = eINSTANCE.getMandatoryVideoSeq_Video();
 
     /**
      * The meta object literal for the '{@link org.xtext.videogen.impl.OptionalVideoSeqImpl <em>Optional Video Seq</em>}' class.
@@ -609,14 +527,6 @@ public interface VideogenPackage extends EPackage
     EClass OPTIONAL_VIDEO_SEQ = eINSTANCE.getOptionalVideoSeq();
 
     /**
-     * The meta object literal for the '<em><b>Video</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference OPTIONAL_VIDEO_SEQ__VIDEO = eINSTANCE.getOptionalVideoSeq_Video();
-
-    /**
      * The meta object literal for the '{@link org.xtext.videogen.impl.AlternativeVideoSeqImpl <em>Alternative Video Seq</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -625,14 +535,6 @@ public interface VideogenPackage extends EPackage
      * @generated
      */
     EClass ALTERNATIVE_VIDEO_SEQ = eINSTANCE.getAlternativeVideoSeq();
-
-    /**
-     * The meta object literal for the '<em><b>Video</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ALTERNATIVE_VIDEO_SEQ__VIDEO = eINSTANCE.getAlternativeVideoSeq_Video();
 
     /**
      * The meta object literal for the '{@link org.xtext.videogen.impl.VideoImpl <em>Video</em>}' class.
@@ -667,32 +569,6 @@ public interface VideogenPackage extends EPackage
      * @generated
      */
     EReference VIDEO__PROPRIETE = eINSTANCE.getVideo_Propriete();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.videogen.impl.VideoAImpl <em>Video A</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.videogen.impl.VideoAImpl
-     * @see org.xtext.videogen.impl.VideogenPackageImpl#getVideoA()
-     * @generated
-     */
-    EClass VIDEO_A = eINSTANCE.getVideoA();
-
-    /**
-     * The meta object literal for the '<em><b>Videoid</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute VIDEO_A__VIDEOID = eINSTANCE.getVideoA_Videoid();
-
-    /**
-     * The meta object literal for the '<em><b>Chemin</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute VIDEO_A__CHEMIN = eINSTANCE.getVideoA_Chemin();
 
     /**
      * The meta object literal for the '{@link org.xtext.videogen.impl.VideoProprieteImpl <em>Video Propriete</em>}' class.

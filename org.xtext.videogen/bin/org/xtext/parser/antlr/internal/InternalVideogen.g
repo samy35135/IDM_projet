@@ -271,9 +271,9 @@ ruleAlternativeVideoSeq returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getAlternativeVideoSeqAccess().getVideoVideoAParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getAlternativeVideoSeqAccess().getVideoVideoParserRuleCall_1_0()); 
 	    }
-		lv_video_1_0=ruleVideoA		{
+		lv_video_1_0=ruleVideo		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getAlternativeVideoSeqRule());
 	        }
@@ -281,7 +281,7 @@ ruleAlternativeVideoSeq returns [EObject current=null]
        			$current, 
        			"video",
         		lv_video_1_0, 
-        		"VideoA");
+        		"Video");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -347,14 +347,14 @@ ruleVideo returns [EObject current=null]
 	    }
 
 )
-)(this_LEFT_BRACKET_3=RULE_LEFT_BRACKET
+)this_LEFT_BRACKET_3=RULE_LEFT_BRACKET
     { 
-    newLeafNode(this_LEFT_BRACKET_3, grammarAccess.getVideoAccess().getLEFT_BRACKETTerminalRuleCall_3_0()); 
+    newLeafNode(this_LEFT_BRACKET_3, grammarAccess.getVideoAccess().getLEFT_BRACKETTerminalRuleCall_3()); 
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getVideoAccess().getProprieteVideoProprieteParserRuleCall_3_1_0()); 
+	        newCompositeNode(grammarAccess.getVideoAccess().getProprieteVideoProprieteParserRuleCall_4_0()); 
 	    }
 		lv_propriete_4_0=ruleVideoPropriete		{
 	        if ($current==null) {
@@ -371,94 +371,7 @@ ruleVideo returns [EObject current=null]
 )
 )this_RIGHT_BRACKET_5=RULE_RIGHT_BRACKET
     { 
-    newLeafNode(this_RIGHT_BRACKET_5, grammarAccess.getVideoAccess().getRIGHT_BRACKETTerminalRuleCall_3_2()); 
-    }
-)?)
-;
-
-
-
-
-
-// Entry rule entryRuleVideoA
-entryRuleVideoA returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getVideoARule()); }
-	 iv_ruleVideoA=ruleVideoA 
-	 { $current=$iv_ruleVideoA.current; } 
-	 EOF 
-;
-
-// Rule VideoA
-ruleVideoA returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-((
-(
-		lv_videoid_0_0=RULE_ID
-		{
-			newLeafNode(lv_videoid_0_0, grammarAccess.getVideoAAccess().getVideoidIDTerminalRuleCall_0_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getVideoARule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"videoid",
-        		lv_videoid_0_0, 
-        		"ID");
-	    }
-
-)
-)?this_LEFT_BRACKET_1=RULE_LEFT_BRACKET
-    { 
-    newLeafNode(this_LEFT_BRACKET_1, grammarAccess.getVideoAAccess().getLEFT_BRACKETTerminalRuleCall_1()); 
-    }
-(	otherlv_2='video' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getVideoAAccess().getVideoKeyword_2_0());
-    }
-(
-(
-		lv_videoid_3_0=RULE_ID
-		{
-			newLeafNode(lv_videoid_3_0, grammarAccess.getVideoAAccess().getVideoidIDTerminalRuleCall_2_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getVideoARule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"videoid",
-        		lv_videoid_3_0, 
-        		"ID");
-	    }
-
-)
-)?(
-(
-		lv_chemin_4_0=RULE_STRING
-		{
-			newLeafNode(lv_chemin_4_0, grammarAccess.getVideoAAccess().getCheminSTRINGTerminalRuleCall_2_2_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getVideoARule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"chemin",
-        		lv_chemin_4_0, 
-        		"STRING");
-	    }
-
-)
-))*this_RIGHT_BRACKET_5=RULE_RIGHT_BRACKET
-    { 
-    newLeafNode(this_RIGHT_BRACKET_5, grammarAccess.getVideoAAccess().getRIGHT_BRACKETTerminalRuleCall_3()); 
+    newLeafNode(this_RIGHT_BRACKET_5, grammarAccess.getVideoAccess().getRIGHT_BRACKETTerminalRuleCall_5()); 
     }
 )
 ;

@@ -77,15 +77,6 @@ public interface VideogenFactory extends EFactory
   Video createVideo();
 
   /**
-   * Returns a new object of class '<em>Video A</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Video A</em>'.
-   * @generated
-   */
-  VideoA createVideoA();
-
-  /**
    * Returns a new object of class '<em>Video Propriete</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

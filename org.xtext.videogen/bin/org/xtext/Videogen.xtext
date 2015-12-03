@@ -20,7 +20,7 @@ VarianteVideo: MandatoryVideoSeq | OptionalVideoSeq | AlternativeVideoSeq
 
 MandatoryVideoSeq : 'mandatory' video=Video ;
 OptionalVideoSeq : 'optional' video=Video;
-AlternativeVideoSeq: 'alternative'  video=VideoA ;
+AlternativeVideoSeq: 'alternative'  video=Video ;
 
 /**
  * La vidéo à un ID et son chemin, propriété : Une description, 
@@ -30,22 +30,10 @@ Video:
 	'video' 
 	(videoid=ID)?
 	chemin=STRING
-	(LEFT_BRACKET
+	LEFT_BRACKET
 	propriete=VideoPropriete
-	RIGHT_BRACKET)?
-;
-
-/**
- * Alternatives fonctionne différement des autres, pas de chaine de caractères
- */
- VideoA:
- 	(videoid=ID)? 
- 	LEFT_BRACKET
- 		('video' 
- 		(videoid=ID)?
- 		chemin=STRING)*
 	RIGHT_BRACKET
- ;
+;
 
 /**
  * la description d'une séquence vidéo est composé d'une probabilite, une duree

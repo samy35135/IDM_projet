@@ -10,24 +10,16 @@
     <genClasses ecoreClass="Videogen.ecore#//VideoGenModel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Videogen.ecore#//VideoGenModel/variante_videos"/>
     </genClasses>
-    <genClasses ecoreClass="Videogen.ecore#//VarianteVideo"/>
-    <genClasses ecoreClass="Videogen.ecore#//MandatoryVideoSeq">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Videogen.ecore#//MandatoryVideoSeq/video"/>
+    <genClasses ecoreClass="Videogen.ecore#//VarianteVideo">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Videogen.ecore#//VarianteVideo/video"/>
     </genClasses>
-    <genClasses ecoreClass="Videogen.ecore#//OptionalVideoSeq">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Videogen.ecore#//OptionalVideoSeq/video"/>
-    </genClasses>
-    <genClasses ecoreClass="Videogen.ecore#//AlternativeVideoSeq">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Videogen.ecore#//AlternativeVideoSeq/video"/>
-    </genClasses>
+    <genClasses ecoreClass="Videogen.ecore#//MandatoryVideoSeq"/>
+    <genClasses ecoreClass="Videogen.ecore#//OptionalVideoSeq"/>
+    <genClasses ecoreClass="Videogen.ecore#//AlternativeVideoSeq"/>
     <genClasses ecoreClass="Videogen.ecore#//Video">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//Video/videoid"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//Video/chemin"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Videogen.ecore#//Video/propriete"/>
-    </genClasses>
-    <genClasses ecoreClass="Videogen.ecore#//VideoA">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//VideoA/videoid"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//VideoA/chemin"/>
     </genClasses>
     <genClasses ecoreClass="Videogen.ecore#//VideoPropriete">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//VideoPropriete/probabilite"/>
