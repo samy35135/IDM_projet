@@ -110,17 +110,10 @@ public class VideogenSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case VideogenPackage.VIDEO:
+      case VideogenPackage.VIDEODESC:
       {
-        Video video = (Video)theEObject;
-        T result = caseVideo(video);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case VideogenPackage.VIDEO_PROPRIETE:
-      {
-        VideoPropriete videoPropriete = (VideoPropriete)theEObject;
-        T result = caseVideoPropriete(videoPropriete);
+        Videodesc videodesc = (Videodesc)theEObject;
+        T result = caseVideodesc(videodesc);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -209,33 +202,17 @@ public class VideogenSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Video</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Videodesc</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Video</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Videodesc</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseVideo(Video object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Video Propriete</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Video Propriete</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseVideoPropriete(VideoPropriete object)
+  public T caseVideodesc(Videodesc object)
   {
     return null;
   }

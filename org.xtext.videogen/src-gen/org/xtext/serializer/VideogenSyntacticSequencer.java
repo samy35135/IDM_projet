@@ -10,6 +10,9 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.GroupAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
+import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 import org.xtext.services.VideogenGrammarAccess;
@@ -18,10 +21,12 @@ import org.xtext.services.VideogenGrammarAccess;
 public class VideogenSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected VideogenGrammarAccess grammarAccess;
+	protected AbstractElementAlias match_Videodesc___LEFT_BRACKETTerminalRuleCall_3_0_RIGHT_BRACKETTerminalRuleCall_3_4__q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (VideogenGrammarAccess) access;
+		match_Videodesc___LEFT_BRACKETTerminalRuleCall_3_0_RIGHT_BRACKETTerminalRuleCall_3_4__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getVideodescAccess().getLEFT_BRACKETTerminalRuleCall_3_0()), new TokenAlias(false, false, grammarAccess.getVideodescAccess().getRIGHT_BRACKETTerminalRuleCall_3_4()));
 	}
 	
 	@Override
@@ -57,8 +62,21 @@ public class VideogenSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			acceptNodes(getLastNavigableState(), syntaxNodes);
+			if(match_Videodesc___LEFT_BRACKETTerminalRuleCall_3_0_RIGHT_BRACKETTerminalRuleCall_3_4__q.equals(syntax))
+				emit_Videodesc___LEFT_BRACKETTerminalRuleCall_3_0_RIGHT_BRACKETTerminalRuleCall_3_4__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
+	/**
+	 * Ambiguous syntax:
+	 *     (LEFT_BRACKET RIGHT_BRACKET)?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     chemin=STRING (ambiguity) (rule end)
+	 */
+	protected void emit_Videodesc___LEFT_BRACKETTerminalRuleCall_3_0_RIGHT_BRACKETTerminalRuleCall_3_4__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
 }

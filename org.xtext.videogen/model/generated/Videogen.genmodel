@@ -10,21 +10,23 @@
     <genClasses ecoreClass="Videogen.ecore#//VideoGenModel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Videogen.ecore#//VideoGenModel/variante_videos"/>
     </genClasses>
-    <genClasses ecoreClass="Videogen.ecore#//VarianteVideo">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Videogen.ecore#//VarianteVideo/video"/>
+    <genClasses ecoreClass="Videogen.ecore#//VarianteVideo"/>
+    <genClasses ecoreClass="Videogen.ecore#//MandatoryVideoSeq">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Videogen.ecore#//MandatoryVideoSeq/video"/>
     </genClasses>
-    <genClasses ecoreClass="Videogen.ecore#//MandatoryVideoSeq"/>
-    <genClasses ecoreClass="Videogen.ecore#//OptionalVideoSeq"/>
-    <genClasses ecoreClass="Videogen.ecore#//AlternativeVideoSeq"/>
-    <genClasses ecoreClass="Videogen.ecore#//Video">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//Video/videoid"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//Video/chemin"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Videogen.ecore#//Video/propriete"/>
+    <genClasses ecoreClass="Videogen.ecore#//OptionalVideoSeq">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Videogen.ecore#//OptionalVideoSeq/video"/>
     </genClasses>
-    <genClasses ecoreClass="Videogen.ecore#//VideoPropriete">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//VideoPropriete/probabilite"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//VideoPropriete/duree"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//VideoPropriete/description"/>
+    <genClasses ecoreClass="Videogen.ecore#//AlternativeVideoSeq">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//AlternativeVideoSeq/videoid"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Videogen.ecore#//AlternativeVideoSeq/video"/>
+    </genClasses>
+    <genClasses ecoreClass="Videogen.ecore#//Videodesc">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//Videodesc/videoid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//Videodesc/chemin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//Videodesc/duree"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//Videodesc/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Videogen.ecore#//Videodesc/probabilite"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

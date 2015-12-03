@@ -100,14 +100,9 @@ public class VideogenAdapterFactory extends AdapterFactoryImpl
         return createAlternativeVideoSeqAdapter();
       }
       @Override
-      public Adapter caseVideo(Video object)
+      public Adapter caseVideodesc(Videodesc object)
       {
-        return createVideoAdapter();
-      }
-      @Override
-      public Adapter caseVideoPropriete(VideoPropriete object)
-      {
-        return createVideoProprieteAdapter();
+        return createVideodescAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -207,31 +202,16 @@ public class VideogenAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.videogen.Video <em>Video</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.videogen.Videodesc <em>Videodesc</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.videogen.Video
+   * @see org.xtext.videogen.Videodesc
    * @generated
    */
-  public Adapter createVideoAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.videogen.VideoPropriete <em>Video Propriete</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.videogen.VideoPropriete
-   * @generated
-   */
-  public Adapter createVideoProprieteAdapter()
+  public Adapter createVideodescAdapter()
   {
     return null;
   }

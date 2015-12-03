@@ -68,22 +68,13 @@ public interface VideogenFactory extends EFactory
   AlternativeVideoSeq createAlternativeVideoSeq();
 
   /**
-   * Returns a new object of class '<em>Video</em>'.
+   * Returns a new object of class '<em>Videodesc</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Video</em>'.
+   * @return a new object of class '<em>Videodesc</em>'.
    * @generated
    */
-  Video createVideo();
-
-  /**
-   * Returns a new object of class '<em>Video Propriete</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Video Propriete</em>'.
-   * @generated
-   */
-  VideoPropriete createVideoPropriete();
+  Videodesc createVideodesc();
 
   /**
    * Returns the package supported by this factory.

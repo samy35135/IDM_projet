@@ -8,6 +8,12 @@ package org.xtext.videogen;
  * A representation of the model object '<em><b>Mandatory Video Seq</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link org.xtext.videogen.MandatoryVideoSeq#getVideo <em>Video</em>}</li>
+ * </ul>
  *
  * @see org.xtext.videogen.VideogenPackage#getMandatoryVideoSeq()
  * @model
@@ -15,4 +21,30 @@ package org.xtext.videogen;
  */
 public interface MandatoryVideoSeq extends VarianteVideo
 {
+  /**
+   * Returns the value of the '<em><b>Video</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Video</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Video</em>' containment reference.
+   * @see #setVideo(Videodesc)
+   * @see org.xtext.videogen.VideogenPackage#getMandatoryVideoSeq_Video()
+   * @model containment="true"
+   * @generated
+   */
+  Videodesc getVideo();
+
+  /**
+   * Sets the value of the '{@link org.xtext.videogen.MandatoryVideoSeq#getVideo <em>Video</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Video</em>' containment reference.
+   * @see #getVideo()
+   * @generated
+   */
+  void setVideo(Videodesc value);
+
 } // MandatoryVideoSeq

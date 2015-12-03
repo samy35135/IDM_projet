@@ -5,6 +5,9 @@ generate videogen "http://www.xtext.org/Videogen"
 
 /*
  * VideoGenModel contiendra toute la syntaxe
+ * ? 0 ou 1
+ * + au moins 1
+ * * > 1
  */
 VideoGenModel:
 	'VideoGen' LEFT_BRACKET
@@ -18,33 +21,25 @@ VideoGenModel:
 VarianteVideo: MandatoryVideoSeq | OptionalVideoSeq | AlternativeVideoSeq
 ;
 
-MandatoryVideoSeq : 'mandatory' video=Video ;
-OptionalVideoSeq : 'optional' video=Video;
-AlternativeVideoSeq: 'alternative'  video=Video ;
+MandatoryVideoSeq : 'mandatory' video=Videodesc;
+OptionalVideoSeq : 'optional' video=Videodesc;
+AlternativeVideoSeq: 'alternative' (videoid=ID)? LEFT_BRACKET
+video+=Videodesc RIGHT_BRACKET;
+
 
 /**
  * La vidéo à un ID et son chemin, propriété : Une description, 
  * sa durée, sa probabilité d'apparition
  */
-Video: 
-	'video' 
-	(videoid=ID)?
+Videodesc: 
+	'video' (videoid=ID)?
 	chemin=STRING
-	LEFT_BRACKET
-	propriete=VideoPropriete
-	RIGHT_BRACKET
-;
-
-/**
- * la description d'une séquence vidéo est composé d'une probabilite, une duree
- * et d'une chaine de caractères
- */
-VideoPropriete :
-	('probabilite' probabilite=INT)?
+	(LEFT_BRACKET
 	('duree' duree=INT)?
 	('description' description=STRING)?
+	('probabilite' probabilite=INT)?
+	RIGHT_BRACKET)?
 ;
-
 	
 terminal LEFT_BRACKET:'{';
 terminal RIGHT_BRACKET:'}';

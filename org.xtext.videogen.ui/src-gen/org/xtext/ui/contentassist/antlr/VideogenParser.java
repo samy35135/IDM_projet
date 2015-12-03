@@ -42,21 +42,21 @@ public class VideogenParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMandatoryVideoSeqAccess().getGroup(), "rule__MandatoryVideoSeq__Group__0");
 					put(grammarAccess.getOptionalVideoSeqAccess().getGroup(), "rule__OptionalVideoSeq__Group__0");
 					put(grammarAccess.getAlternativeVideoSeqAccess().getGroup(), "rule__AlternativeVideoSeq__Group__0");
-					put(grammarAccess.getVideoAccess().getGroup(), "rule__Video__Group__0");
-					put(grammarAccess.getVideoProprieteAccess().getGroup(), "rule__VideoPropriete__Group__0");
-					put(grammarAccess.getVideoProprieteAccess().getGroup_0(), "rule__VideoPropriete__Group_0__0");
-					put(grammarAccess.getVideoProprieteAccess().getGroup_1(), "rule__VideoPropriete__Group_1__0");
-					put(grammarAccess.getVideoProprieteAccess().getGroup_2(), "rule__VideoPropriete__Group_2__0");
+					put(grammarAccess.getVideodescAccess().getGroup(), "rule__Videodesc__Group__0");
+					put(grammarAccess.getVideodescAccess().getGroup_3(), "rule__Videodesc__Group_3__0");
+					put(grammarAccess.getVideodescAccess().getGroup_3_1(), "rule__Videodesc__Group_3_1__0");
+					put(grammarAccess.getVideodescAccess().getGroup_3_2(), "rule__Videodesc__Group_3_2__0");
+					put(grammarAccess.getVideodescAccess().getGroup_3_3(), "rule__Videodesc__Group_3_3__0");
 					put(grammarAccess.getVideoGenModelAccess().getVariante_videosAssignment_2(), "rule__VideoGenModel__Variante_videosAssignment_2");
 					put(grammarAccess.getMandatoryVideoSeqAccess().getVideoAssignment_1(), "rule__MandatoryVideoSeq__VideoAssignment_1");
 					put(grammarAccess.getOptionalVideoSeqAccess().getVideoAssignment_1(), "rule__OptionalVideoSeq__VideoAssignment_1");
-					put(grammarAccess.getAlternativeVideoSeqAccess().getVideoAssignment_1(), "rule__AlternativeVideoSeq__VideoAssignment_1");
-					put(grammarAccess.getVideoAccess().getVideoidAssignment_1(), "rule__Video__VideoidAssignment_1");
-					put(grammarAccess.getVideoAccess().getCheminAssignment_2(), "rule__Video__CheminAssignment_2");
-					put(grammarAccess.getVideoAccess().getProprieteAssignment_4(), "rule__Video__ProprieteAssignment_4");
-					put(grammarAccess.getVideoProprieteAccess().getProbabiliteAssignment_0_1(), "rule__VideoPropriete__ProbabiliteAssignment_0_1");
-					put(grammarAccess.getVideoProprieteAccess().getDureeAssignment_1_1(), "rule__VideoPropriete__DureeAssignment_1_1");
-					put(grammarAccess.getVideoProprieteAccess().getDescriptionAssignment_2_1(), "rule__VideoPropriete__DescriptionAssignment_2_1");
+					put(grammarAccess.getAlternativeVideoSeqAccess().getVideoidAssignment_1(), "rule__AlternativeVideoSeq__VideoidAssignment_1");
+					put(grammarAccess.getAlternativeVideoSeqAccess().getVideoAssignment_3(), "rule__AlternativeVideoSeq__VideoAssignment_3");
+					put(grammarAccess.getVideodescAccess().getVideoidAssignment_1(), "rule__Videodesc__VideoidAssignment_1");
+					put(grammarAccess.getVideodescAccess().getCheminAssignment_2(), "rule__Videodesc__CheminAssignment_2");
+					put(grammarAccess.getVideodescAccess().getDureeAssignment_3_1_1(), "rule__Videodesc__DureeAssignment_3_1_1");
+					put(grammarAccess.getVideodescAccess().getDescriptionAssignment_3_2_1(), "rule__Videodesc__DescriptionAssignment_3_2_1");
+					put(grammarAccess.getVideodescAccess().getProbabiliteAssignment_3_3_1(), "rule__Videodesc__ProbabiliteAssignment_3_3_1");
 				}
 			};
 		}

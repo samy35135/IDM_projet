@@ -20,9 +20,8 @@ import org.xtext.services.VideogenGrammarAccess;
 import org.xtext.videogen.AlternativeVideoSeq;
 import org.xtext.videogen.MandatoryVideoSeq;
 import org.xtext.videogen.OptionalVideoSeq;
-import org.xtext.videogen.Video;
 import org.xtext.videogen.VideoGenModel;
-import org.xtext.videogen.VideoPropriete;
+import org.xtext.videogen.Videodesc;
 import org.xtext.videogen.VideogenPackage;
 
 @SuppressWarnings("all")
@@ -43,14 +42,11 @@ public class VideogenSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case VideogenPackage.OPTIONAL_VIDEO_SEQ:
 				sequence_OptionalVideoSeq(context, (OptionalVideoSeq) semanticObject); 
 				return; 
-			case VideogenPackage.VIDEO:
-				sequence_Video(context, (Video) semanticObject); 
-				return; 
 			case VideogenPackage.VIDEO_GEN_MODEL:
 				sequence_VideoGenModel(context, (VideoGenModel) semanticObject); 
 				return; 
-			case VideogenPackage.VIDEO_PROPRIETE:
-				sequence_VideoPropriete(context, (VideoPropriete) semanticObject); 
+			case VideogenPackage.VIDEODESC:
+				sequence_Videodesc(context, (Videodesc) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
@@ -58,48 +54,41 @@ public class VideogenSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     video=Video
+	 *     (videoid=ID? video+=Videodesc)
 	 */
 	protected void sequence_AlternativeVideoSeq(EObject context, AlternativeVideoSeq semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, VideogenPackage.Literals.VARIANTE_VIDEO__VIDEO) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VideogenPackage.Literals.VARIANTE_VIDEO__VIDEO));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getAlternativeVideoSeqAccess().getVideoVideoParserRuleCall_1_0(), semanticObject.getVideo());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     video=Video
+	 *     video=Videodesc
 	 */
 	protected void sequence_MandatoryVideoSeq(EObject context, MandatoryVideoSeq semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, VideogenPackage.Literals.VARIANTE_VIDEO__VIDEO) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VideogenPackage.Literals.VARIANTE_VIDEO__VIDEO));
+			if(transientValues.isValueTransient(semanticObject, VideogenPackage.Literals.MANDATORY_VIDEO_SEQ__VIDEO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VideogenPackage.Literals.MANDATORY_VIDEO_SEQ__VIDEO));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getMandatoryVideoSeqAccess().getVideoVideoParserRuleCall_1_0(), semanticObject.getVideo());
+		feeder.accept(grammarAccess.getMandatoryVideoSeqAccess().getVideoVideodescParserRuleCall_1_0(), semanticObject.getVideo());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     video=Video
+	 *     video=Videodesc
 	 */
 	protected void sequence_OptionalVideoSeq(EObject context, OptionalVideoSeq semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, VideogenPackage.Literals.VARIANTE_VIDEO__VIDEO) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VideogenPackage.Literals.VARIANTE_VIDEO__VIDEO));
+			if(transientValues.isValueTransient(semanticObject, VideogenPackage.Literals.OPTIONAL_VIDEO_SEQ__VIDEO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VideogenPackage.Literals.OPTIONAL_VIDEO_SEQ__VIDEO));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getOptionalVideoSeqAccess().getVideoVideoParserRuleCall_1_0(), semanticObject.getVideo());
+		feeder.accept(grammarAccess.getOptionalVideoSeqAccess().getVideoVideodescParserRuleCall_1_0(), semanticObject.getVideo());
 		feeder.finish();
 	}
 	
@@ -115,18 +104,9 @@ public class VideogenSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (probabilite=INT? duree=INT? description=STRING?)
+	 *     (videoid=ID? chemin=STRING (duree=INT? description=STRING? probabilite=INT?)?)
 	 */
-	protected void sequence_VideoPropriete(EObject context, VideoPropriete semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (videoid=ID? chemin=STRING propriete=VideoPropriete)
-	 */
-	protected void sequence_Video(EObject context, Video semanticObject) {
+	protected void sequence_Videodesc(EObject context, Videodesc semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 }
