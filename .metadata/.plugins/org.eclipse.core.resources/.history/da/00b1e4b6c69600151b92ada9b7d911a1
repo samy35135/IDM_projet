@@ -1,8 +1,0 @@
-package transformation;
-
-import java.net.URI;
-
-public class VideoGen {
-	
-	videogen = loadVideoGenerator(URI.create("foo1.mmr"));
-}

@@ -1,0 +1,123 @@
+package org.xtext
+
+import org.xtext.videogen.VarianteVideo;
+import org.xtext.*;
+import Playlist.Playlist;
+import Playlist.impl.PlaylistFactoryImpl
+import Playlist.impl.PlaylistImpl
+import org.xtext.videogen.VideoGenModel
+import org.xtext.videogen.AlternativeVideoSeq
+import org.xtext.videogen.MandatoryVideoSeq
+import org.xtext.videogen.OptionalVideoSeq
+import org.xtext.videogen.Videodesc
+import java.util.Random
+import java.util.LinkedList
+
+/**
+ * Sert classe sert à générer une playlist à l'aide de la Factory
+ * Cette playlist sera compréhensible par VLC 
+ */
+class TransformVideogen {
+
+	/**
+	 * Permet de gérer la playlist à partir du model VideoGenModel
+	 */
+	def modeltoplaylist(VideoGenModel videogen){
+		// récupération de la factory généré par Ecore Modeling Framwork
+		var PlaylistFactoryImpl playlistFactory = PlaylistFactoryImpl.init() as PlaylistFactoryImpl
+        // La playlist qu'on retourne et qui sera créée
+        val PlaylistImpl playlistimpl = playlistFactory.createPlaylist() as PlaylistImpl
+       
+  		videogen.variante_videos.forEach[video|
+  			
+  			var typevideo = getType(video);
+  			
+  			// déleguation du traitement à d'autres fonctions
+  			switch typevideo {
+  				case 1: gererMandatory(video as MandatoryVideoSeq)
+  				case 2 : gererOptional(video as OptionalVideoSeq) 
+  				case 3 : gererAlternative(video as AlternativeVideoSeq)
+  				default : println("erreur")
+  			}
+  			// récupérer la description
+  			
+  		]
+	}
+        
+        
+    /**
+	 * permet de déterminer le genre de VarianteVideo
+	 * @return int : A si Mandatory, 2 si Optional, 3 si alternative, 4 erreur
+	 */
+	def private static getType(VarianteVideo video){
+		if (video instanceof MandatoryVideoSeq ) {
+			return 1;
+		} else if(video instanceof OptionalVideoSeq ){
+			return 2;
+		} else if(video instanceof AlternativeVideoSeq ) {
+			return 3;
+		}else{
+			return 4;
+		}
+	}
+	
+	/// Gestions séparée pour chaque vidéos
+	
+	/**
+	 * @return videodesc
+	 */
+	def private static gererMandatory(MandatoryVideoSeq video){
+		return video.video;
+	}
+	/**
+	 * @return videodesc ou null
+	 */
+	def private static gererOptional(OptionalVideoSeq video){
+		// Un sur Deux 
+		return gererOptionalProba(video);
+	}
+	/**
+	 * @return videodesc ou null
+	 */
+	def private static gererAlternative(AlternativeVideoSeq video){
+		return gererAlternativeProba(video)
+	}
+	
+	
+	/// Gestion des probabilités
+	/** 
+	 * Permet de gerer la probabilité d'apparation des videos Optional
+	 * @return null ou video
+	 */
+	def private static gererOptionalProba(OptionalVideoSeq video){
+		var rand = Math.random();
+		if(rand >= 0.5){
+			return video.video;
+		}else {
+			return null
+		}
+	}
+
+	/** 
+	  * Permet de gerer la probabilité d'apparation des videos Alternatives
+	  *  @return null ou video
+	 */
+	def private static gererAlternativeProba(AlternativeVideoSeq video){
+		var size = video.video.size;
+		var proba = 1 / 10;
+		var listeVideoReturn = new LinkedList<Videodesc>
+		var listvideo = video.video;
+		
+		// pour chaque video on regarde si on les prends et si on les prends on ajoute dans la liste à retourner
+		
+		listvideo.forEach[videodesc | 
+			var rand = Math.random();
+			if(rand <= 0.1){
+				listeV
+			}
+		]
+		
+		return listerVideoReturn;
+	}
+  
+}

@@ -24,7 +24,7 @@ VarianteVideo: MandatoryVideoSeq | OptionalVideoSeq | AlternativeVideoSeq
 MandatoryVideoSeq : 'mandatory' video=Videodesc;
 OptionalVideoSeq : 'optional' video=Videodesc;
 AlternativeVideoSeq: 'alternative' (videoid=ID)? LEFT_BRACKET
-video+=Videodesc RIGHT_BRACKET;
+video+=Videodesc+ RIGHT_BRACKET;
 
 
 /**

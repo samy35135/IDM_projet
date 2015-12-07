@@ -10,7 +10,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.xtend.lib,
  org.eclipse.xtend.lib.macro,
- org.xtext.videogen;bundle-version="1.0.0"
+ org.xtext.videogen;bundle-version="1.0.0",
+ playlistgen;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 
