@@ -48,6 +48,7 @@ Content repository
 How to use the generator ?
 -------------
 - Import the project in your IDE
+- !Important! the folders "/videosts" and "/vignettes" have to be empty before any executions
 - Run /transformation/transformation.xtend
 - To create only a playlist in .m3u8 (extended format):
 	- comment all main's instructions except :
