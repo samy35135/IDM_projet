@@ -285,9 +285,9 @@ class Transformation {
 	 * Page web HTML pour jouer une séquence video via le lecteur Flowplayer
 	 * à partir d'une playlist au format .m3u étendue
 	 */
-	def generationHTMLFlowplayer(){
-		var File file = new File("playerHTML.html");
-        val FileWriter fw = new FileWriter(file,false);
+	def generationHTMLFlowplayer(URI uri){
+		var File file = new File(uri.toString)
+        val FileWriter fw = new FileWriter(file,false)
         
         fw.write("<html><head><link rel='stylesheet' href='https://releases.flowplayer.org/6.0.4/skin/minimalist.css'>
         <script src='https://code.jquery.com/jquery-1.11.2.min.js'></script>
@@ -319,6 +319,6 @@ class Transformation {
 		transformation.PlaylistToTXTouM3u(URI.createURI("playlist.m3u"),playlist)//création d'un fichier .m3u à partir d'un model de playlist
 		transformation.PlaylistToTXTouM3u(URI.createURI("playlist.txt"),playlist)//création d'un fichier .txt à partir d'un model de playlist
 		transformation.PlaylistToM3Uetendue(URI.createURI("playlistflow.m3u8"),playlist)//création d'un fichier .m3u étendue à partir d'un model de playlist
-		transformation.generationHTMLFlowplayer();
+		transformation.generationHTMLFlowplayer(URI.createURI("playerHTML.html"))
 	}
 }

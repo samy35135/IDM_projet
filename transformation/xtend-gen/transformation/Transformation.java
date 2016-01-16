@@ -462,9 +462,10 @@ public class Transformation {
    * Page web HTML pour jouer une séquence video via le lecteur Flowplayer
    * à partir d'une playlist au format .m3u étendue
    */
-  public void generationHTMLFlowplayer() {
+  public void generationHTMLFlowplayer(final URI uri) {
     try {
-      File file = new File("playerHTML.html");
+      String _string = uri.toString();
+      File file = new File(_string);
       final FileWriter fw = new FileWriter(file, false);
       fw.write("<html><head><link rel=\'stylesheet\' href=\'https://releases.flowplayer.org/6.0.4/skin/minimalist.css\'>\n        <script src=\'https://code.jquery.com/jquery-1.11.2.min.js\'></script>\n        <!--script src=\'https://releases.flowplayer.org/6.0.4/flowplayer.min.js\'></script>\n        <script src=\'https://releases.flowplayer.org/6.0.4/flowplayer.swf\'></script-->\n\t\t<script src=\'/Users/matthieucolliaux/Documents/Work/IDM/workspaceIDM/flowplayer/flowplayer.min.js\'></script>\n\t\t<script src=\'/Users/matthieucolliaux/Documents/Work/IDM/workspaceIDM/flowplayer/flowplayer.swf\'></script>\n   \t\t </head><body>\n\t\t<div data-live=\'true\' data-ratio=\'0.5625\' class=\'flowplayer fixed-controls\'>\n            <video data-title=\'Live stream\'>\n                <source type=\'application/x-mpegurl\' src=\'playlistflow.m3u8\'>\n            </video>\n        </div>\n        <p id=\'vinfo\' class=\'info\'>&nbsp;</p>\n\t\t<script>\n\t\tflowplayer(function (api) {api.on(\'load\', function (e, api, video) {\n    \t$(\'#vinfo\').text(api.engine.engineName + \' engine playing \' + video.type);});\n\t\t});\n\t\t</script></body></html>");
       fw.close();
@@ -487,6 +488,7 @@ public class Transformation {
     transformation.PlaylistToTXTouM3u(_createURI_3, playlist);
     URI _createURI_4 = URI.createURI("playlistflow.m3u8");
     transformation.PlaylistToM3Uetendue(_createURI_4, playlist);
-    transformation.generationHTMLFlowplayer();
+    URI _createURI_5 = URI.createURI("playerHTML.html");
+    transformation.generationHTMLFlowplayer(_createURI_5);
   }
 }
