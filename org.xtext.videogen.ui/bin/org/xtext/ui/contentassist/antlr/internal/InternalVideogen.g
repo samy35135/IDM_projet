@@ -333,9 +333,16 @@ rule__VideoGenModel__Group__2__Impl
     }
 :
 (
+(
+{ before(grammarAccess.getVideoGenModelAccess().getVariante_videosAssignment_2()); }
+(rule__VideoGenModel__Variante_videosAssignment_2)
+{ after(grammarAccess.getVideoGenModelAccess().getVariante_videosAssignment_2()); }
+)
+(
 { before(grammarAccess.getVideoGenModelAccess().getVariante_videosAssignment_2()); }
 (rule__VideoGenModel__Variante_videosAssignment_2)*
 { after(grammarAccess.getVideoGenModelAccess().getVariante_videosAssignment_2()); }
+)
 )
 
 ;
@@ -613,9 +620,16 @@ rule__AlternativeVideoSeq__Group__3__Impl
     }
 :
 (
+(
 { before(grammarAccess.getAlternativeVideoSeqAccess().getVideoAssignment_3()); }
 (rule__AlternativeVideoSeq__VideoAssignment_3)
 { after(grammarAccess.getAlternativeVideoSeqAccess().getVideoAssignment_3()); }
+)
+(
+{ before(grammarAccess.getAlternativeVideoSeqAccess().getVideoAssignment_3()); }
+(rule__AlternativeVideoSeq__VideoAssignment_3)*
+{ after(grammarAccess.getAlternativeVideoSeqAccess().getVideoAssignment_3()); }
+)
 )
 
 ;

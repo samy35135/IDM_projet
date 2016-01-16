@@ -2,7 +2,7 @@
  */
 package Playlist.provider;
 
-import Playlist.util.PlaylistAdapterFactory;
+import PlayList.util.PlaylistAdapterFactory;
 
 import java.util.ArrayList;
 import java.util.Collection;

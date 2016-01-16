@@ -33,10 +33,10 @@ public class VideogenGrammarAccess extends AbstractGrammarElementFinder {
 		// * + au moins 1
 		// * * > 1
 		// * / VideoGenModel:
-		//	"VideoGen" LEFT_BRACKET variante_videos+=VarianteVideo* RIGHT_BRACKET;
+		//	"VideoGen" LEFT_BRACKET variante_videos+=VarianteVideo+ RIGHT_BRACKET;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"VideoGen" LEFT_BRACKET variante_videos+=VarianteVideo* RIGHT_BRACKET
+		//"VideoGen" LEFT_BRACKET variante_videos+=VarianteVideo+ RIGHT_BRACKET
 		public Group getGroup() { return cGroup; }
 
 		//"VideoGen"
@@ -45,7 +45,7 @@ public class VideogenGrammarAccess extends AbstractGrammarElementFinder {
 		//LEFT_BRACKET
 		public RuleCall getLEFT_BRACKETTerminalRuleCall_1() { return cLEFT_BRACKETTerminalRuleCall_1; }
 
-		//variante_videos+=VarianteVideo*
+		//variante_videos+=VarianteVideo+
 		public Assignment getVariante_videosAssignment_2() { return cVariante_videosAssignment_2; }
 
 		//VarianteVideo
@@ -142,10 +142,10 @@ public class VideogenGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRIGHT_BRACKETTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
 		
 		//AlternativeVideoSeq:
-		//	"alternative" videoid=ID? LEFT_BRACKET video+=Videodesc RIGHT_BRACKET;
+		//	"alternative" videoid=ID? LEFT_BRACKET video+=Videodesc+ RIGHT_BRACKET;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"alternative" videoid=ID? LEFT_BRACKET video+=Videodesc RIGHT_BRACKET
+		//"alternative" videoid=ID? LEFT_BRACKET video+=Videodesc+ RIGHT_BRACKET
 		public Group getGroup() { return cGroup; }
 
 		//"alternative"
@@ -160,7 +160,7 @@ public class VideogenGrammarAccess extends AbstractGrammarElementFinder {
 		//LEFT_BRACKET
 		public RuleCall getLEFT_BRACKETTerminalRuleCall_2() { return cLEFT_BRACKETTerminalRuleCall_2; }
 
-		//video+=Videodesc
+		//video+=Videodesc+
 		public Assignment getVideoAssignment_3() { return cVideoAssignment_3; }
 
 		//Videodesc
@@ -329,7 +329,7 @@ public class VideogenGrammarAccess extends AbstractGrammarElementFinder {
 	// * + au moins 1
 	// * * > 1
 	// * / VideoGenModel:
-	//	"VideoGen" LEFT_BRACKET variante_videos+=VarianteVideo* RIGHT_BRACKET;
+	//	"VideoGen" LEFT_BRACKET variante_videos+=VarianteVideo+ RIGHT_BRACKET;
 	public VideoGenModelElements getVideoGenModelAccess() {
 		return pVideoGenModel;
 	}
@@ -372,7 +372,7 @@ public class VideogenGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//AlternativeVideoSeq:
-	//	"alternative" videoid=ID? LEFT_BRACKET video+=Videodesc RIGHT_BRACKET;
+	//	"alternative" videoid=ID? LEFT_BRACKET video+=Videodesc+ RIGHT_BRACKET;
 	public AlternativeVideoSeqElements getAlternativeVideoSeqAccess() {
 		return pAlternativeVideoSeq;
 	}

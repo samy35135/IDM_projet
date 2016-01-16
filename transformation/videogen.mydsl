@@ -1,0 +1,14 @@
+VideoGen{
+	mandatory video v1 "../videos/im-in-love-with-the-coco-panda.mp4"
+	optional video v2 "../videos/elle-est-ou-jeanne.mp4"
+	optional video v3 "../videos/moette-thug-life.mp4"
+	optional video v6 "../videos/hotlinebling.mp4"
+	alternative v4{
+	    video v41 "../videos/tapir-thug-life.mp4"
+		video v42 "../videos/jean-marie-le-pen-jeanne-au-secours.mp4"	
+	}
+	alternative v5{
+	    video v51 "../videos/yallah-la-verite-si-je-mens.mp4"
+		video v52 "../videos/ronaldosuuu.mp4"
+	}
+}

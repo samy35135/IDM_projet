@@ -11,7 +11,7 @@ generate videogen "http://www.xtext.org/Videogen"
  */
 VideoGenModel:
 	'VideoGen' LEFT_BRACKET
-	variante_videos+=VarianteVideo* RIGHT_BRACKET
+	variante_videos+=VarianteVideo+ RIGHT_BRACKET
 	;
 
 /** 

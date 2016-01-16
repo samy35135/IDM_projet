@@ -217,8 +217,8 @@ public class InternalVideogenLexer extends Lexer {
         try {
             int _type = RULE_LEFT_BRACKET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1285:19: ( '{' )
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1285:21: '{'
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1299:19: ( '{' )
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1299:21: '{'
             {
             match('{'); 
 
@@ -237,8 +237,8 @@ public class InternalVideogenLexer extends Lexer {
         try {
             int _type = RULE_RIGHT_BRACKET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1287:20: ( '}' )
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1287:22: '}'
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1301:20: ( '}' )
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1301:22: '}'
             {
             match('}'); 
 
@@ -257,10 +257,10 @@ public class InternalVideogenLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1289:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1289:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1303:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1303:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1289:11: ( '^' )?
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1303:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -269,7 +269,7 @@ public class InternalVideogenLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1289:11: '^'
+                    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1303:11: '^'
                     {
                     match('^'); 
 
@@ -287,7 +287,7 @@ public class InternalVideogenLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1289:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1303:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -336,10 +336,10 @@ public class InternalVideogenLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1291:10: ( ( '0' .. '9' )+ )
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1291:12: ( '0' .. '9' )+
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1305:10: ( ( '0' .. '9' )+ )
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1305:12: ( '0' .. '9' )+
             {
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1291:12: ( '0' .. '9' )+
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1305:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -353,7 +353,7 @@ public class InternalVideogenLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1291:13: '0' .. '9'
+            	    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1305:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -385,10 +385,10 @@ public class InternalVideogenLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1293:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1293:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1307:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1307:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1293:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1307:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -406,10 +406,10 @@ public class InternalVideogenLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1293:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1307:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1293:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1307:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -425,7 +425,7 @@ public class InternalVideogenLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1293:21: '\\\\' .
+                    	    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1307:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -433,7 +433,7 @@ public class InternalVideogenLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1293:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1307:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -458,10 +458,10 @@ public class InternalVideogenLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1293:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1307:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1293:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1307:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -477,7 +477,7 @@ public class InternalVideogenLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1293:54: '\\\\' .
+                    	    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1307:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -485,7 +485,7 @@ public class InternalVideogenLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1293:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1307:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -528,12 +528,12 @@ public class InternalVideogenLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1295:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1295:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1309:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1309:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1295:24: ( options {greedy=false; } : . )*
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1309:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -558,7 +558,7 @@ public class InternalVideogenLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1295:52: .
+            	    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1309:52: .
             	    {
             	    matchAny(); 
 
@@ -588,12 +588,12 @@ public class InternalVideogenLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1297:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1297:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1311:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1311:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1297:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1311:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -606,7 +606,7 @@ public class InternalVideogenLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1297:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1311:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -626,7 +626,7 @@ public class InternalVideogenLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1297:40: ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1311:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -635,9 +635,9 @@ public class InternalVideogenLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1297:41: ( '\\r' )? '\\n'
+                    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1311:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1297:41: ( '\\r' )?
+                    // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1311:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -646,7 +646,7 @@ public class InternalVideogenLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1297:41: '\\r'
+                            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1311:41: '\\r'
                             {
                             match('\r'); 
 
@@ -678,10 +678,10 @@ public class InternalVideogenLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1299:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1299:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1313:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1313:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1299:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1313:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -735,8 +735,8 @@ public class InternalVideogenLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1301:16: ( . )
-            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1301:18: .
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1315:16: ( . )
+            // ../org.xtext.videogen.ui/src-gen/org/xtext/ui/contentassist/antlr/internal/InternalVideogen.g:1315:18: .
             {
             matchAny(); 
 

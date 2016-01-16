@@ -3,8 +3,8 @@
 package Playlist.provider;
 
 
-import Playlist.PlaylistPackage;
-import Playlist.Video;
+import PlayList.PlaylistPackage;
+import PlayList.Video;
 
 import java.util.Collection;
 import java.util.List;

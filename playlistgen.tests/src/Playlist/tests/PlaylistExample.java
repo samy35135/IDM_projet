@@ -2,9 +2,9 @@
  */
 package Playlist.tests;
 
-import Playlist.Playlist;
-import Playlist.PlaylistFactory;
-import Playlist.PlaylistPackage;
+import PlayList.Playlist;
+import PlayList.PlaylistFactory;
+import PlayList.PlaylistPackage;
 
 import java.io.File;
 import java.io.IOException;

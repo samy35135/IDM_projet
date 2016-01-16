@@ -3,7 +3,7 @@
 package Playlist.provider;
 
 
-import Playlist.PlaylistPackage;
+import PlayList.PlaylistPackage;
 
 import java.util.Collection;
 import java.util.List;

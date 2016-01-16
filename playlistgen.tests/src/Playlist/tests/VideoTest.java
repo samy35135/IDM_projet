@@ -2,8 +2,8 @@
  */
 package Playlist.tests;
 
-import Playlist.PlaylistFactory;
-import Playlist.Video;
+import PlayList.PlaylistFactory;
+import PlayList.Video;
 
 import junit.framework.TestCase;
 

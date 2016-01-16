@@ -103,7 +103,7 @@ this_LEFT_BRACKET_1=RULE_LEFT_BRACKET
 	    }
 
 )
-)*this_RIGHT_BRACKET_3=RULE_RIGHT_BRACKET
+)+this_RIGHT_BRACKET_3=RULE_RIGHT_BRACKET
     { 
     newLeafNode(this_RIGHT_BRACKET_3, grammarAccess.getVideoGenModelAccess().getRIGHT_BRACKETTerminalRuleCall_3()); 
     }
@@ -308,7 +308,7 @@ ruleAlternativeVideoSeq returns [EObject current=null]
 	    }
 
 )
-)this_RIGHT_BRACKET_4=RULE_RIGHT_BRACKET
+)+this_RIGHT_BRACKET_4=RULE_RIGHT_BRACKET
     { 
     newLeafNode(this_RIGHT_BRACKET_4, grammarAccess.getAlternativeVideoSeqAccess().getRIGHT_BRACKETTerminalRuleCall_4()); 
     }

@@ -54,7 +54,7 @@ public class VideogenSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (videoid=ID? video+=Videodesc)
+	 *     (videoid=ID? video+=Videodesc+)
 	 */
 	protected void sequence_AlternativeVideoSeq(EObject context, AlternativeVideoSeq semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -95,7 +95,7 @@ public class VideogenSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     variante_videos+=VarianteVideo*
+	 *     variante_videos+=VarianteVideo+
 	 */
 	protected void sequence_VideoGenModel(EObject context, VideoGenModel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

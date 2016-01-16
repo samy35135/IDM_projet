@@ -10,9 +10,15 @@ Bundle-Activator: playlistgen.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- playlistgen.edit;bundle-version="1.0.0"
+ playlistgen.edit;bundle-version="1.0.0",
+ com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtend.lib.macro,
+ org.xtext.videogen;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: Playlist,
- Playlist.impl,
- Playlist.util
+Export-Package: PlayList,
+ PlayList.impl,
+ PlayList.util
 Bundle-ActivationPolicy: lazy
+

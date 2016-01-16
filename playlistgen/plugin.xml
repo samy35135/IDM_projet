@@ -11,7 +11,15 @@
       <package
             uri="playlistidm"
             class="Playlist.PlaylistPackage"
-            genModel="Playlist.genmodel"/>
+            genModel="PlayList.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated PlayList -->
+      <package
+            uri="playListidm"
+            class="PlayList.PlaylistPackage"
+            genModel="PlayList.genmodel"/>
    </extension>
 
 </plugin>

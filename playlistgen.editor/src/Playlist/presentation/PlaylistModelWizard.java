@@ -69,8 +69,8 @@ import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
 
-import Playlist.PlaylistFactory;
-import Playlist.PlaylistPackage;
+import PlayList.PlaylistFactory;
+import PlayList.PlaylistPackage;
 import Playlist.provider.PlaylistEditPlugin;
 
 
